@@ -9,7 +9,7 @@ import { http } from 'viem';
 
 const config = getDefaultConfig({
   appName: 'Degen Signatures',
-  projectId: 'c3d87f95095eeb2687fa21aaf8fbb4db',
+  projectId: process.env.NEXT_PUBLIC_WALLET_CONNECT_PROJECT_ID as string,
   chains: [sepolia],
   transports: {
     [sepolia.id]: http()
